@@ -14,18 +14,6 @@ translucent and graphical images found on the web. The degree of lossy compressi
 user can choose the trade-off between file size and image quality.
 
 
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libwebp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libwebp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libwebp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libwebp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libwebp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libwebp-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/version.svg)](https://anaconda.org/conda-forge/libwebp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/downloads.svg)](https://anaconda.org/conda-forge/libwebp)
-
 Installing libwebp
 ==================
 
@@ -81,6 +69,18 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libwebp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libwebp-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/libwebp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libwebp-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libwebp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libwebp-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/version.svg)](https://anaconda.org/conda-forge/libwebp)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/downloads.svg)](https://anaconda.org/conda-forge/libwebp)
 
 
 Updating libwebp-feedstock
