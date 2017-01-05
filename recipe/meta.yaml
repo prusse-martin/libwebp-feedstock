@@ -8,7 +8,7 @@ package:
 
 source:
   fn:  lib{{ name }}-{{ version }}.tar.gz
-  url: https://storage.googleapis.com/downloads.webmproject.org/releases/{{name}}/lib{{ name }}-{{ version }}.tar.gz
+  url: http://storage.googleapis.com/downloads.webmproject.org/releases/{{name}}/lib{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
