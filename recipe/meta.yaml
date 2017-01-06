@@ -1,6 +1,6 @@
 {% set name = "webp" %}
-{% set version = "0.5.1" %}
-{% set sha256 = "6ad66c6fcd60a023de20b6856b03da8c7d347269d76b1fd9c3287e8b5e8813df" %}
+{% set version = "0.5.2" %}
+{% set sha256 = "b75310c810b3eda222c77f6d6c26b061240e3d9060095de44b2c1bae291ecdef" %}
 
 package:
   name: lib{{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn:  lib{{ name }}-{{ version }}.tar.gz
-  url: https://storage.googleapis.com/downloads.webmproject.org/releases/{{name}}/lib{{ name }}-{{ version }}.tar.gz
+  url: http://storage.googleapis.com/downloads.webmproject.org/releases/{{name}}/lib{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
