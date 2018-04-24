@@ -17,14 +17,16 @@ user can choose the trade-off between file size and image quality.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libwebp-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libwebp-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libwebp-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libwebp-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libwebp-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libwebp-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libwebp-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libwebp-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libwebp-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libwebp-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/libwebp-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/libwebp-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/version.svg)](https://anaconda.org/conda-forge/libwebp)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libwebp/badges/downloads.svg)](https://anaconda.org/conda-forge/libwebp)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libwebp-green.svg)](https://anaconda.org/conda-forge/libwebp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libwebp.svg)](https://anaconda.org/conda-forge/libwebp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libwebp.svg)](https://anaconda.org/conda-forge/libwebp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libwebp.svg)](https://anaconda.org/conda-forge/libwebp) |
 
 Installing libwebp
 ==================
@@ -69,6 +71,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========

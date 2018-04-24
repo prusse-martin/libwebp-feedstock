@@ -1,6 +1,6 @@
 {% set name = "webp" %}
-{% set version = "0.5.2" %}
-{% set sha256 = "b75310c810b3eda222c77f6d6c26b061240e3d9060095de44b2c1bae291ecdef" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "84259c4388f18637af3c5a6361536d754a5394492f91be1abc2e981d4983225b" %}
 
 package:
   name: lib{{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 7
+  number: 0
   features:
     - vc9  # [win and py27]
     - vc10  # [win and py34]
