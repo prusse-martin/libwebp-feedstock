@@ -7,13 +7,13 @@ channel_sources:
 channel_targets:
 - conda-forge gcc7
 docker_image:
-- conda/c3i-linux-64
+- condaforge/linux-anvil-comp7
 giflib:
 - '5.1'
 jpeg:
 - '9'
 libpng:
-- 1.6.34
+- 1.6.35
 libtiff:
 - 4.0.9
 pin_run_as_build:
