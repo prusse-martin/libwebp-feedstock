@@ -12,7 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
+  run_exports:
+    # https://abi-laboratory.pro/?view=timeline&l=libwebp
+    - {{ pin_subpackage('libwebp', max_pin='x.x') }}
 
 requirements:
   build:
