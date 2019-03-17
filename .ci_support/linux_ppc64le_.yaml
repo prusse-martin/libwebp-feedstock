@@ -1,5 +1,7 @@
 c_compiler:
 - gcc
+c_compiler_version:
+- '8'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -7,7 +9,7 @@ channel_targets:
 docker_image:
 - condaforge/linux-anvil-ppc64le
 giflib:
-- '5.1'
+- 5.1.7
 jpeg:
 - '9'
 libpng:
@@ -15,8 +17,6 @@ libpng:
 libtiff:
 - 4.0.10
 pin_run_as_build:
-  giflib:
-    max_pin: x.x
   jpeg:
     max_pin: x
   libpng:
