@@ -2,12 +2,14 @@ MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 c_compiler:
 - clang
+c_compiler_version:
+- '4'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 giflib:
-- '5.1'
+- 5.1.7
 jpeg:
 - '9'
 libpng:
@@ -19,8 +21,6 @@ macos_machine:
 macos_min_version:
 - '10.9'
 pin_run_as_build:
-  giflib:
-    max_pin: x.x
   jpeg:
     max_pin: x
   libpng:
