@@ -1,6 +1,6 @@
 
 :: Hack for winres.h being called winresrc.h on VS2008
-if %vc% LEQ 9 copy %RECIPE_DIR%\winres.h .
+if %VS_MAJOR% LEQ 9 copy %RECIPE_DIR%\winres.h .
 
 :: Build!
 nmake /f Makefile.vc CFG=release-dynamic RTLIBCFG=dynamic OBJDIR=output
