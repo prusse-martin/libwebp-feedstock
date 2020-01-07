@@ -1,18 +1,15 @@
-{% set name = "webp" %}
 {% set version = "1.1.0" %}
-{% set sha256 = "98a052268cc4d5ece27f76572a7f50293f439c17a98e67c4ea0c7ed6f50ef043" %}
 
 package:
-  name: lib{{ name|lower }}
+  name: libwebp
   version: {{ version }}
 
 source:
-  fn:  lib{{ name }}-{{ version }}.tar.gz
-  url: http://storage.googleapis.com/downloads.webmproject.org/releases/{{name}}/lib{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: http://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-{{ version }}.tar.gz
+  sha256: 98a052268cc4d5ece27f76572a7f50293f439c17a98e67c4ea0c7ed6f50ef043
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # https://abi-laboratory.pro/?view=timeline&l=libwebp
     - {{ pin_subpackage('libwebp', max_pin='x.x') }}
@@ -20,28 +17,22 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - make  # [unix]
+    - make  # [not win]
   host:
-    - jpeg  # [unix]
-    - libpng  # [unix]
-    - libtiff  # [unix]
-    - giflib  # [unix]
+    - jpeg  # [not win]
+    - libpng  # [not win]
+    - libtiff  # [not win]
+    - giflib  # [not win]
   run:
-    - jpeg  # [unix]
-    - libpng  # [unix]
-    - libtiff  # [unix]
-    - giflib  # [unix]
+    - jpeg  # [not win]
+    - libpng  # [not win]
+    - libtiff  # [not win]
+    - giflib  # [not win]
 
 test:
   commands:
-    - test -f $PREFIX/lib/libwebp.a  # [unix]
-    - test -f $PREFIX/lib/libwebp.dylib  # [osx]
-    - test -f $PREFIX/lib/libwebp.so  # [linux]
-    - test -f $PREFIX/bin/cwebp  # [unix]
-    - test -f $PREFIX/bin/dwebp  # [unix]
-    - test -f $PREFIX/include/webp/decode.h  # [unix]
-    - test -f $PREFIX/include/webp/encode.h  # [unix]
-    - test -f $PREFIX/include/webp/types.h  # [unix]
+    - test -f $PREFIX/bin/cwebp  # [not win]
+    - test -f $PREFIX/bin/dwebp  # [not win]
     - if not exist %LIBRARY_LIB%\\libwebp.lib exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\libwebpdemux.lib exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\libwebpdecoder.lib exit 1  # [win]
@@ -54,8 +45,33 @@ test:
     - if not exist %LIBRARY_INC%\\webp\\encode.h exit 1  # [win]
     - if not exist %LIBRARY_INC%\\webp\\types.h exit 1  # [win]
 
+outputs:  # [not win]
+  - name: libwebp  # [not win]
+    files:  # [not win]
+      - bin/  # [not win]
+      - {{ pin_subpackage('libwebp-base', exact=True) }}  # [not win]
+    requirements:  # [not win]
+      run:  # [not win]
+        - jpeg  # [not win]
+        - libpng  # [not win]
+        - libtiff  # [not win]
+        - giflib  # [not win]
+
+  - name: libwebp-base  # [not win]
+    files:  # [not win]
+      - include/  # [not win]
+      - share/  # [not win]
+      - lib/  # [not win]
+    test:  # [not win]
+      commands:  # [not win]
+        - test -f $PREFIX/lib/libwebp.a  # [not win]
+        - test -f $PREFIX/lib/libwebp{{ SHLIB_EXT }}  # [not win]
+        - test -f $PREFIX/include/webp/decode.h  # [not win]
+        - test -f $PREFIX/include/webp/encode.h  # [not win]
+        - test -f $PREFIX/include/webp/types.h  # [not win]
+
 about:
-  home: https://developers.google.com/speed/webp/
+  home: https://developers.google.com/speed/webp
   license: Google
   license_file: COPYING
   summary: "WebP image library"
