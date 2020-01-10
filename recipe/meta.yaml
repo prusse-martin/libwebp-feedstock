@@ -19,13 +19,11 @@ requirements:
     - {{ compiler('c') }}
     - make  # [not win]
   host:
-    - libwebp-base  # [not win]
     - jpeg  # [not win]
     - libpng  # [not win]
     - libtiff  # [not win]
     - giflib  # [not win]
   run:
-    - libwebp-base  # [not win]
     - jpeg  # [not win]
     - libpng  # [not win]
     - libtiff  # [not win]
@@ -56,6 +54,13 @@ outputs:  # [not win]
   - name: libwebp  # [not win]
     files:  # [not win]
       - bin/  # [not win]
+    requirements:  # [not win]
+      run:  # [not win]
+        - libwebp-base  # [not win]
+        - jpeg  # [not win]
+        - libpng  # [not win]
+        - libtiff  # [not win]
+        - giflib  # [not win]
 
   - name: libwebp-base  # [not win]
     files:  # [not win]
