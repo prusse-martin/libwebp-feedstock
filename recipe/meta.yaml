@@ -30,9 +30,13 @@ requirements:
     - giflib  # [not win]
 
 test:
+  source_files:
+    - examples/test.webp
+    
   commands:
     - test -f $PREFIX/bin/cwebp  # [not win]
     - test -f $PREFIX/bin/dwebp  # [not win]
+    - dwebp examples/test.webp  # [not win]
     - if not exist %LIBRARY_LIB%\\libwebp.lib exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\libwebpdemux.lib exit 1  # [win]
     - if not exist %LIBRARY_LIB%\\libwebpdecoder.lib exit 1  # [win]
@@ -44,6 +48,7 @@ test:
     - if not exist %LIBRARY_INC%\\webp\\decode.h exit 1  # [win]
     - if not exist %LIBRARY_INC%\\webp\\encode.h exit 1  # [win]
     - if not exist %LIBRARY_INC%\\webp\\types.h exit 1  # [win]
+    - dwebp examples\\test.webp  # [win]
 
 outputs:  # [not win]
   - name: libwebp  # [not win]
