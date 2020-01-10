@@ -10,9 +10,9 @@ source:
 
 build:
   number: 2
-  run_exports:
-    # https://abi-laboratory.pro/?view=timeline&l=libwebp
-    - {{ pin_subpackage('libwebp', max_pin='x.x') }}
+  run_exports:  # [win]
+    # https://abi-laboratory.pro/?view=timeline&l=libwebp  # [win]
+    - {{ pin_subpackage('libwebp', max_pin='x.x') }}  # [win]
 
 requirements:
   build:
@@ -56,13 +56,17 @@ outputs:  # [not win]
       - bin/  # [not win]
     requirements:  # [not win]
       run:  # [not win]
-        - libwebp-base  # [not win]
+        - {{ pin_subpackage('libwebp-base', exact=True) }}  # [not win]
         - jpeg  # [not win]
         - libpng  # [not win]
         - libtiff  # [not win]
         - giflib  # [not win]
 
   - name: libwebp-base  # [not win]
+    build:  # [not win]
+      run_exports:  # [not win]
+        # https://abi-laboratory.pro/?view=timeline&l=libwebp  # [not win]
+        - {{ pin_subpackage('libwebp-base', max_pin='x.x') }}  # [not win]
     files:  # [not win]
       - include/  # [not win]
       - share/  # [not win]
